@@ -1,15 +1,15 @@
 ## :pushpin: Table of Contents
 
 * [Color Luminance](#color-luminance)
-  - [TypeScript](src/typescript/color-luminance/index.ts)
+  - [TypeScript](src/typescript/src/color-luminance/index.ts)
 * [License](#memo-license)
 
-### :art: <a id="color-luminance"></a> Color Luminance [[TypeScript]](src/typescript/color-luminance/index.ts)
+### :art: <a id="color-luminance"></a> Color Luminance [[TypeScript]](src/typescript/src/color-luminance/index.ts)
 
 * Code from [Stack Overflow](https://stackoverflow.com/questions/5560248/programmatically-lighten-or-darken-a-hex-color-or-rgb-and-blend-colors)
 * Calling the function:
   - TypeScript:
-  ```
+  ```javascript
   // lighten
   shadeColor({
     colorInHex: '#63C6FF',
