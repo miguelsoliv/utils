@@ -3,6 +3,11 @@ interface IRequest {
   luminosityPercent: number;
 }
 
+/**
+ * @function shadeColor
+ * @description Change the brightness of a color
+ * @returns `string` or `undefined`
+ */
 function shadeColor({
   colorInHex,
   luminosityPercent,
