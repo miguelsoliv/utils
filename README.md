@@ -2,11 +2,21 @@
 
 ## :pushpin: Table of Contents
 
+* [Starting Projects](#start)
+* [Clean Code List](#clean-code)
 * [Color Luminance](#color-luminance)
   - [TypeScript](src/typescript/src/color-luminance/index.ts)
 * [Mocking File](#mocking-file)
   - [TypeScript](src/typescript/src/mocking-file/index.ts)
 * [License](#memo-license)
+
+### 🔨 <a id="start"></a>Starting Projects
+
+[TypeScript]: Go to `...\utils\src\typescript` and just `yarn dev`
+
+### 📖 <a id="clean-code"></a>Clean Code List
+
+* Reducing number of `if`s: using Object to replace them. Code from [this repo](https://github.com/ErickWendel/coding-dojo-js-purple99)
 
 ### :art: <a id="color-luminance"></a> Color Luminance [[TypeScript]](src/typescript/src/color-luminance/index.ts)
 
