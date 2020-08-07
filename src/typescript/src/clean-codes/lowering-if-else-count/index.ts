@@ -21,6 +21,12 @@ interface ICases {
   };
 }
 
+/**
+ * @function play
+ *
+ * @description Create a mock file (good for testing purposes)
+ */
+
 function play({ firstPlay, secondPlay }: IRequest): string {
   const cases: ICases = {
     rock: {

@@ -26,5 +26,9 @@
     "supertest": "^4.0.2",
     "ts-node-dev": "^1.0.0-pre.50",
     "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "@types/amqplib": "^0.5.13",
+    "amqplib": "^0.6.0"
   }
 }

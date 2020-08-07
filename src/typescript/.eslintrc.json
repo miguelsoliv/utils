@@ -19,6 +19,8 @@
     "eslint-plugin-import-helpers"
   ],
   "rules": {
+    "no-console": "off",
+    "no-useless-constructor": "off",
     "no-underscore-dangle": "off",
     "prettier/prettier": "error",
     "@typescript-eslint/no-explicit-any": "off",
