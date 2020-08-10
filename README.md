@@ -17,6 +17,7 @@
 ### 📖 <a id="clean-code"></a>Clean Code List
 
 * Reducing number of `if`s: using Object to replace them. Code from [this repo](https://github.com/ErickWendel/coding-dojo-js-purple99)
+* Mapping and filtering Array in one loop: prevent going through Array 2 times (mapping and filtering after it)
 
 ### :art: <a id="color-luminance"></a> Color Luminance [[TypeScript]](src/typescript/src/color-luminance/index.ts)
 
