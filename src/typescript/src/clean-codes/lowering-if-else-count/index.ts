@@ -26,7 +26,6 @@ interface ICases {
  *
  * @description Create a mock file (good for testing purposes)
  */
-
 function play({ firstPlay, secondPlay }: IRequest): string {
   const cases: ICases = {
     rock: {
@@ -49,11 +48,16 @@ function play({ firstPlay, secondPlay }: IRequest): string {
   return cases[firstPlay][secondPlay];
 }
 
+/**
+ * @function dontPlayMe
+ *
+ * @description Just don't
+ */
 function dontPlayMe({ firstPlay, secondPlay }: IRequest): any {
   if (firstPlay === secondPlay) return 'draw';
 
   if (firstPlay === 'rock' && secondPlay === 'scissor') {
-    return 'rock ganhou';
+    return 'rock wins';
   }
 
   if (firstPlay === 'rock' && secondPlay === 'paper') {
