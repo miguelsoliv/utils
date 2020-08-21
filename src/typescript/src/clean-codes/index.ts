@@ -3,6 +3,10 @@ import {
   dontPlayMe as notFixedIfElseCount,
 } from './lowering-if-else-count';
 import mapAndFilterArray from './map-and-filter-array';
+import {
+  problematicAccountNumberAvailabilityCheck,
+  problemSolved,
+} from './while-async';
 
 const ifElseLowerExample = (): void => {
   const gameResult = lowerIfElseCount({
@@ -30,4 +34,18 @@ const filterArrayExample = (): void => {
   console.table(array);
 };
 
-export { ifElseLowerExample, ifElseNotLowerExample, filterArrayExample };
+const whileAsyncWrongExample = async (): Promise<void> => {
+  await problematicAccountNumberAvailabilityCheck();
+};
+
+const whileAsyncExample = async (): Promise<void> => {
+  await new Promise(resolve => problemSolved(resolve));
+};
+
+export {
+  ifElseLowerExample,
+  ifElseNotLowerExample,
+  filterArrayExample,
+  whileAsyncWrongExample,
+  whileAsyncExample,
+};
