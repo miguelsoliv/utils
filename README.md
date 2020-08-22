@@ -1,13 +1,12 @@
 ###### * See the docs from the methods if any question pops up
 
-## :pushpin: Table of Contents
+## 📌 Table of Contents
 
 * [Starting Projects](#start)
 * [Clean Code List](#clean-code)
-* [Color Luminance](#color-luminance)
-  - [TypeScript](src/typescript/src/color-luminance/index.ts)
-* [Mocking File](#mocking-file)
-  - [TypeScript](src/typescript/src/mocking-file/index.ts)
+* [Color Luminance](#color-luminance): [👉 [TypeScript]](src/typescript/src/color-luminance/index.ts)
+* [Mocking File](#mocking-file): [👉 [TypeScript]](src/typescript/src/mocking-file/index.ts)
+* [Using RabbitMQ](#rabbitmq): [👉 [TypeScript]](src/typescript/src/rabbitmq-example/index.ts)
 * [License](#memo-license)
 
 ### 🔨 <a id="start"></a>Starting Projects
@@ -17,9 +16,10 @@
 ### 📖 <a id="clean-code"></a>Clean Code List
 
 * Reducing number of `if`s: using Object to replace them. Code from [this repo](https://github.com/ErickWendel/coding-dojo-js-purple99)
-* Mapping and filtering Array in one loop: prevent going through Array 2 times (mapping and filtering after it)
+* Using `map` and `filter` in Array in one loop: prevent going through Array 2 times (mapping and filtering after it)
+* Using `while` inside async function: prevent `Unexpected 'await' inside a loop. eslint(no-await-in-loop)`
 
-### :art: <a id="color-luminance"></a> Color Luminance [[TypeScript]](src/typescript/src/color-luminance/index.ts)
+### 🎨 <a id="color-luminance"></a> Color Luminance [[TypeScript]](src/typescript/src/color-luminance/index.ts)
 
 Change the color brightness, making it lighter or darker
 
@@ -53,10 +53,51 @@ Create a Mock Object of a File
     });
     ```
 
-## :memo: License
+### 📨 <a id="rabbitmq"></a> Using RabbitMQ [[TypeScript]](src/typescript/src/rabbitmq-example/index.ts)
+
+Common uses for RabbitMQ. Remember that you can create a test account at: https://www.cloudamqp.com/plans.html
+
+* Calling the function:
+  - TypeScript:
+    ```javascript
+    // connecting to server
+    const rabbitmq = new RabbitMQExample();
+    const rabbitmqWithExchange = new RabbitMQExample('my-exchange');
+
+    // sending messages to queue
+    rabbitmq
+      .toQueue({
+        queueName: 'queue_test',
+        messageToSend: 'This is a test.',
+      })
+      .then(() => console.log('RabbitMQ message sent to queue'));
+
+    // sending messages to exchange
+    rabbitmqWithExchange
+      .toExchange({
+        queues: [
+          {
+            queueName: 'Exchange Queue 1',
+            routingKey: '123',
+            messages: ['this is', 'a test'],
+          },
+          {
+            queueName: 'Exchange Queue 2',
+            routingKey: '321',
+            messages: ['this is', 'another test'],
+          },
+        ],
+      })
+      .then(() => console.log('RabbitMQ messages sent to exchange'));
+    ```
+
+#### TODO:
+  1. Create ConfirmChannel example?
+
+## 📝 License
 
 This project is under [MIT license](/LICENSE).
 
 ---
 
-Made with :sparkling_heart: by [Miguel Oliveira](https://github.com/miguelsoliv) :wave:
+Made with 💖 by [Miguel Oliveira](https://github.com/miguelsoliv) 👋

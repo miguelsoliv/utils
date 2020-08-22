@@ -18,31 +18,32 @@ const mockedFileExample = (): void => {
 };
 
 const rabbitMQExample = (): void => {
-  const rabbitmq = new RabbitMQExample('my-exchange');
+  const rabbitmq = new RabbitMQExample();
+  const rabbitmqWithExchange = new RabbitMQExample('my-exchange');
 
   rabbitmq
     .toQueue({
       queueName: 'queue_test',
       messageToSend: 'This is a test.',
     })
-    .then(() => console.log('RabbitMQ message sent'));
+    .then(() => console.log('RabbitMQ message sent to queue'));
 
-  rabbitmq
+  rabbitmqWithExchange
     .toExchange({
       queues: [
         {
-          queueName: 'Queue 1',
+          queueName: 'Exchange Queue 1',
           routingKey: '123',
           messages: ['this is', 'a test'],
         },
         {
-          queueName: 'Queue 2',
+          queueName: 'Exchange Queue 2',
           routingKey: '321',
           messages: ['this is', 'another test'],
         },
       ],
     })
-    .then(() => console.log('RabbitMQ messages sent'));
+    .then(() => console.log('RabbitMQ messages sent to exchange'));
 };
 
 export { colorsExample, mockedFileExample, rabbitMQExample };

@@ -8,7 +8,7 @@ import sendToExchange from './sendToExchange';
  * @summary You can create an account (for testing) at: https://www.cloudamqp.com/plans.html
  */
 class RabbitMQExample {
-  constructor(private exchangeName: string) {}
+  constructor(private exchangeName?: string) {}
 
   private createConnection = async (): Promise<amqp.Connection> => {
     return amqp.connect({
