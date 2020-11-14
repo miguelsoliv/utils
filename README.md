@@ -18,6 +18,7 @@
 * Reducing number of `if`s: using Object to replace them. Code from [this repo](https://github.com/ErickWendel/coding-dojo-js-purple99)
 * Using `map` and `filter` in Array in one loop: prevent going through Array 2 times (mapping and filtering after it)
 * Using `while` inside async function: prevent `Unexpected 'await' inside a loop. eslint(no-await-in-loop)`
+* Dynamically getting value from Object using a fixed string + index
 
 ### 🎨 <a id="color-luminance"></a> Color Luminance [[TypeScript]](src/typescript/src/color-luminance/index.ts)
 
