@@ -6,6 +6,7 @@ import {
   filterArrayExample,
   whileAsyncWrongExample,
   whileAsyncExample,
+  getObjectValueExample,
 } from './src/clean-codes';
 
 /* colorsExample();
@@ -21,6 +22,8 @@ filterArrayExample(); */
 })(); */
 
 // auto run function
-(async () => {
+/* (async () => {
   await whileAsyncExample();
-})();
+})(); */
+
+getObjectValueExample();

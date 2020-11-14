@@ -7,6 +7,7 @@ import {
   problematicAccountNumberAvailabilityCheck,
   problemSolved,
 } from './while-async';
+import getObjectValue from './object-access-dynamic-keys';
 
 const ifElseLowerExample = (): void => {
   const gameResult = lowerIfElseCount({
@@ -42,10 +43,16 @@ const whileAsyncExample = async (): Promise<void> => {
   await new Promise(resolve => problemSolved(resolve));
 };
 
+const getObjectValueExample = (): void => {
+  console.log(getObjectValue(3));
+  console.log(getObjectValue(4));
+};
+
 export {
   ifElseLowerExample,
   ifElseNotLowerExample,
   filterArrayExample,
   whileAsyncWrongExample,
   whileAsyncExample,
+  getObjectValueExample,
 };
